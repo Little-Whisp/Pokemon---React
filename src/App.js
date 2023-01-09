@@ -4,7 +4,7 @@ import Pokemon from './Pokemon';
 import './style.css';
 
 export default function App () {
-  const [pokedex, setPokedex] = useState([
+  const [pokedex, setPokedex, removePokedex] = useState([
     "Mimikyue",
     "Pikachu",
     "Piplup"
@@ -18,10 +18,8 @@ export default function App () {
     <div>
       <h1> Programming 6</h1>
       {showPokemon}
-      <button onClick={() => {
-
-        setPokedex([...pokedex, "Charmander"])
-      }}>Add Pokemon</button>
+      <button onClick={() => { setPokedex([...pokedex, "Charmander"]) }}>Add Pokemon</button>
+      {/* <button onClick={() => { removePokedex([...pokedex, ""]) }}>Delete Pokemon</button> */}
     </div>
   );
 }

@@ -9,6 +9,11 @@ export default function Pokemon(props) {
   const addLike = () => {
     setLikes((value) => value + 1);
   };
+  
+  const deleteItem = () => {
+    setLikes((value) => value - 1);
+  };
+
 
   const [name, setName] = useState(props.name)
 
@@ -22,6 +27,7 @@ export default function Pokemon(props) {
        <p>Likes: {likes}</p>
        <input onChange={inputHandler} type = "text" value={name}/>
        <button onClick={addLike}>Like</button>
+       <button onClick={deleteItem}>Delete</button>
       </section>
   );
 }
